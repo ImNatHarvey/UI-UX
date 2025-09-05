@@ -1,298 +1,300 @@
-    :root {
-        --light: #fffdf5;
-        --dark: #213448;
-        --primary: #113F67;
-        --secondary: #FDF5AA;
-        --accent: #FFC374;
+:root {
+    --light: #fffdf5;
+    --dark: #213448;
+    --primary: #113F67;
+    --secondary: #fdf5aa;
+    --accent: #ffc374;
+}
+
+/* Base */
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= Navbar ================= */
+.navbar-custom {
+    background-color: var(--primary);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.navbar-brand span {
+    font-weight: normal;
+}
+
+.nav-link {
+    color: var(--light);
+    margin: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary) !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.navbar-toggler {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+/* Navbar Buttons */
+.btn-custom {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+@media (max-width: 991px) {
+    #navbarNav {
+        text-align: center;
     }
 
-    body {
-        background-color: var(--light);
-        color: var(--dark);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    #navbarNav .navbar-nav {
+        margin: 0 auto;
     }
 
-    /* Start Navbar */
-    .navbar-custom {
-        background-color: var(--primary);
+    #navbarNav .d-flex {
+        justify-content: center;
+        margin-top: 10px;
     }
+}
 
-    .navbar-brand {
-        font-weight: bold;
-        color: var(--secondary);
-    }
+/* ================= Primary Content ================= */
+/* Promo Banner */
+.promo-banner {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    .navbar-brand span {
-        font-weight: normal;
-    }
+.promo-banner h4 {
+    color: var(--primary);
+    font-weight: bold;
+}
 
-    .nav-link {
-        color: var(--light);
-        margin: 0 10px;
-    }
+.promo-banner p {
+    margin: 0;
+    color: var(--dark);
+}
 
-    .nav-link:hover {
-        color: var(--secondary);
-    }
+/* Section Title */
+.section-title {
+    color: var(--primary);
+    font-weight: bold;
+}
 
-    .nav-link.active {
-        color: var(--secondary) !important;
-        font-weight: bold;
-        border-bottom: 2px solid var(--secondary);
-    }
+/* Call to Action */
+.cta-section {
+    background-color: var(--secondary);
+    padding: 50px 20px;
+}
 
-    .navbar-toggler {
-        background-color: var(--secondary);
-        color: var(--primary);
-    }
+.cta-section h4 {
+    color: var(--primary);
+    font-weight: bold;
+}
 
-    .btn-custom {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-radius: 50px;
-        margin-left: 10px;
-        padding: 5px 15px;
-        font-weight: bold;
-    }
+/* ================= Menu Page ================= */
+/* Category Filter */
+.category-btn,
+.btn-outline-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--secondary);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 
-    .btn-custom:hover {
-        background-color: var(--light);
-        color: var(--primary);
-    }
+.category-btn.active,
+.btn-outline-primary.active,
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    border-color: var(--primary);
+}
 
-    @media (max-width: 991px) {
-        #navbarNav {
-            text-align: center;
-        }
+/* Search */
+.input-group .form-control {
+    border-radius: 20px 0 0 20px;
+    border: 2px solid var(--secondary);
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
 
-        #navbarNav .navbar-nav {
-            margin: 0 auto;
-        }
+.input-group .btn {
+    border-radius: 0 20px 20px 0;
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
 
-        #navbarNav .d-flex {
-            justify-content: center;
-            margin-top: 10px;
-        }
-    }
+.input-group:hover .form-control,
+.input-group:hover .btn {
+    background-color: var(--primary);
+    color: var(--light);
+    border-color: var(--primary);
+}
 
-    /* End Navbar */
-
-    /* Start Primary Content */
-
-    /* Promo Banner */
-    .promo-banner {
-        background-color: var(--secondary);
-        /* soft yellow */
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .promo-banner h4 {
-        color: var(--primary);
-        font-weight: bold;
-    }
-
-    .promo-banner p {
-        margin: 0;
-        color: var(--dark);
-    }
-
-    /* Section Title */
-    .section-title {
-        color: var(--primary);
-        font-weight: bold;
-    }
-
-    /* Call to Action */
-    .cta-section {
-        background-color: var(--secondary);
-        padding: 50px 20px;
-    }
-
-    .cta-section h4 {
-        color: var(--primary);
-        font-weight: bold;
-    }
-
-    .btn-custom {
-        background-color: var(--accent);
-        color: var(--primary);
-        font-weight: bold;
-        border-radius: 30px;
-        padding: 10px 25px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-    }
-
-    .btn-custom:hover {
-        background-color: var(--light);
-        color: var(--primary);
-    }
-
-    /* End Primary Content */
-
-    /* Start Menu Page Content */
-
-    /* Category Filter Buttons */
-    .category-btn,
-    .btn-outline-primary {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-color: var(--secondary);
-        border-radius: 20px;
-        padding: 6px 16px;
-        font-weight: bold;
-        transition: 0.3s ease;
-    }
-
-    .category-btn.active,
-    .btn-outline-primary.active,
-    .btn-outline-primary:hover {
-        background-color: var(--primary);
-        color: var(--light);
-        border-color: var(--primary);
-    }
-
-    /* Search Function */
-
-    .input-group .form-control {
-        border-radius: 20px 0 0 20px;
-        border: 2px solid var(--secondary);
-        padding: 10px 15px;
-    }
-
-    .input-group .btn {
-        border-radius: 0 20px 20px 0;
-        border: 2px solid var(--secondary);
-        background-color: var(--secondary);
-        color: var(--primary);
-        font-weight: bold;
-        transition: 0.3s ease;
-    }
-
-    .input-group .form-control,
-    .input-group .btn {
-        transition: all 0.2s ease-in-out;
-    }
-
-    .input-group:hover .form-control,
-    .input-group:hover .btn {
-        background-color: var(--primary);
-        color: var(--light);
-        border-color: var(--primary);
-    }
-
-    .input-group:hover .form-control::placeholder {
+.input-group:hover .form-control::placeholder {
     color: var(--light);
     opacity: 1;
-    }
+}
 
-    /* Menu Cards */
-    .card {
-        background-color: var(--secondary);
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+/* Menu Cards */
+.card {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
-    .card-img-top {
-        height: 180px;
-        object-fit: cover;
-        /* makes all images same height */
-    }
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
 
-    .card-title {
-        font-weight: bold;
-        color: var(--primary);
-    }
+.card-title {
+    font-weight: bold;
+    color: var(--primary);
+}
 
-    .price {
-        color: var(--dark);
-        font-size: 1rem;
-    }
+.price {
+    color: var(--dark);
+    font-size: 1rem;
+}
 
-    /* Order Button */
-    .btn-order,
-    .btn-warning {
-        background-color: var(--accent);
-        color: var(--dark);
-        font-weight: bold;
-        border-radius: 20px;
-        padding: 6px 16px;
-        transition: 0.3s ease;
-    }
+/* Order Buttons */
+.btn-order,
+.btn-warning {
+    background-color: var(--accent);
+    color: var(--dark);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 6px 16px;
+    transition: 0.3s ease;
+}
 
-    .btn-order:hover,
-    .btn-warning:hover {
-        background-color: var(--primary);
-        border-color: var(--primary);
-        color: var(--light);
-    }
+.btn-order:hover,
+.btn-warning:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--light);
+}
 
-    /* Order Summary */
-    .order-summary {
-        background-color: var(--secondary);
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+/* Order Summary */
+.order-summary {
+    background-color: var(--secondary);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    .order-title {
-        font-weight: bold;
-        color: var(--primary);
-    }
+.order-title {
+    font-weight: bold;
+    color: var(--primary);
+}
 
-    .total-price {
-        font-size: 1.1rem;
-        color: var(--primary);
-    }
+.total-price {
+    font-size: 1.1rem;
+    color: var(--primary);
+}
 
-    .btn-checkout {
-        background-color: var(--accent);
-        color: var(--primary);
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 10px;
-        transition: 0.3s ease;
-    }
+.btn-checkout {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
 
-    .btn-checkout:hover {
-        background-color: var(--primary);
-        color: var(--light);
-    }
+.btn-checkout:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
 
-    /* End Menu Page Content */
+/* ================= Sticky Order Summary ================= */
+.sticky-order-summary {
+    background: #fff;
+    border-top: 2px solid #ddd;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    margin-top: 40px;
+}
 
-    /* Start Order Page  */
-    
-    .order-page {
-        background-color: var(--light);
-        padding: 50px 20px;
-    }
+.sticky-order-summary .summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .order-page h2 {
-        color: var(--primary);
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-    
+.sticky-order-summary strong {
+    font-size: 1.1rem;
+}
 
-    /* End Order Page */
+#footer-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-left: 8px;
+}
 
-    /* Start Footer */
+.sticky-order-summary button {
+    min-width: 160px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
 
-    footer {
-        background-color: var(--primary);
-        color: var(--light);
-        text-align: center;
-        padding: 20px;
-        margin-top: auto;
-    }
+/* ================= Order Page ================= */
+.order-page {
+    background-color: var(--light);
+    padding: 50px 20px;
+}
 
-    /* End Footer */
+.order-page h2 {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* ================= Footer ================= */
+footer {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}

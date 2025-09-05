@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="customer-dashboard.html">
+            <span style="font-weight:bold;">MK</span> Toasted Siopao
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customerNavbar"
+            aria-controls="customerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="customerNavbar">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item"><a class="nav-link active" href="customer-dashboard.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="customer-menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="customer-order.html">My Orders</a></li>
+                <li class="nav-item"><a class="nav-link" href="customer-history.html">My History</a></li>
+                <li class="nav-item"><a class="nav-link" href="customer-profile.html">My Profile</a></li>
+            </ul>
+
+            <!-- User Menu with Dropdown -->
+            <div class="d-flex justify-content-center">
+                <div class="dropdown">
+                    <button class="btn btn-custom dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle me-1"></i> My Account
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="customer-profile.html">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="customer-order.html">Order History</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html" id="customerLogout">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
