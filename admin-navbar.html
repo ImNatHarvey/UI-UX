@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="admin.html">
+            <span style="font-weight:bold;">MK</span> Admin Panel
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar"
+            aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="adminNavbar">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item"><a class="nav-link" href="admin.html">Dashboard</a></li>
+
+                <!-- Management Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="managementDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Management
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="managementDropdown">
+                        <li><a class="dropdown-item" href="admin-orders.html">
+                                <strong>Order Management</strong><br>
+                                <small>View and manage customer orders</small>
+                            </a></li>
+                        <li><a class="dropdown-item" href="admin-customers.html">
+                                <strong>Customer Management</strong><br>
+                                <small>Manage customer accounts and data</small>
+                            </a></li>
+                        <li><a class="dropdown-item" href="admin-products.html">
+                                <strong>Product Management</strong><br>
+                                <small>Update menu items and pricing</small>
+                            </a></li>
+                        <li><a class="dropdown-item" href="admin-inventory.html">
+                                <strong>Inventory Management</strong><br>
+                                <small>Track and manage ingredient stock</small>
+                            </a></li>
+                        <li><a class="dropdown-item" href="admin-transactions.html">
+                                <strong>Transaction History</strong><br>
+                                <small>View all transaction records</small>
+                            </a></li>
+                        <li><a class="dropdown-item" href="admin-settings.html">
+                                <strong>Site Management</strong><br>
+                                <small>Configure website settings</small>
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+            </ul>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center">
+                <a href="index.html" class="btn btn-custom">View Site</a>
+                <a href="index.html" id="adminLogout" class="btn btn-custom">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>

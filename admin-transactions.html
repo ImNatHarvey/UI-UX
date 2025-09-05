@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MK Toasted Siopao - Transaction History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="admin-body">
+    <!-- Admin Navbar include -->
+    <div id="admin-navbar"></div>
+
+    <!-- Transaction History Content -->
+    <div class="container mt-5 pt-5">
+        <h2 class="section-title mb-4 text-center">Transaction History</h2>
+
+        <!-- Filters -->
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <form class="row g-3 justify-content-center align-items-center">
+                    <div class="col-auto">
+                        <label for="start-date" class="col-form-label">From:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="date" id="start-date" class="form-control">
+                    </div>
+                    <div class="col-auto">
+                        <label for="end-date" class="col-form-label">To:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="date" id="end-date" class="form-control">
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-custom">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card text-center py-3">
+                    <h5>Total Transactions</h5>
+                    <div class="fs-4 fw-bold">1,158</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-center py-3">
+                    <h5>Total Revenue</h5>
+                    <div class="fs-4 fw-bold">₱145,820</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-center py-3">
+                    <h5>Average Order Value</h5>
+                    <div class="fs-4 fw-bold">₱126</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card text-center py-3">
+                    <h5>Refunds</h5>
+                    <div class="fs-4 fw-bold">₱2,450</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="card mb-4">
+            <div class="card-header text-center">
+                <h5 class="mb-0">Recent Transactions</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle text-center">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Payment Method</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#TXN-45892</td>
+                                <td>Sep 1, 2025 14:30</td>
+                                <td>Juan Dela Cruz</td>
+                                <td>₱150</td>
+                                <td>GCash</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-custom">View</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary">Receipt</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-45891</td>
+                                <td>Sep 1, 2025 13:15</td>
+                                <td>Maria Santos</td>
+                                <td>₱240</td>
+                                <td>Credit Card</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-custom">View</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary">Receipt</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-45890</td>
+                                <td>Sep 1, 2025 12:05</td>
+                                <td>Robert Lim</td>
+                                <td>₱120</td>
+                                <td>Cash</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-custom">View</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary">Receipt</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-45889</td>
+                                <td>Sep 1, 2025 11:20</td>
+                                <td>Anna Reyes</td>
+                                <td>₱200</td>
+                                <td>GCash</td>
+                                <td><span class="badge bg-warning text-dark">Refunded</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-custom">View</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary">Receipt</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-between align-items-center mt-4 mb-5">
+                    <button class="btn btn-outline-secondary">Previous</button>
+                    <span>Page 1 of 12</span>
+                    <button class="btn btn-outline-secondary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer include -->
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

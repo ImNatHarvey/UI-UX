@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MK Toasted Siopao - Site Management</title>
+  <link href="/Images/favicon.ico" rel="icon" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="admin-navbar"></div>
+
+  <!-- Site Management -->
+  <main class="container my-5 pt-5">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Site Management</h1>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Announcement Management -->
+        <section class="mb-5">
+          <h2>Announcement Management</h2>
+          <div class="card p-4 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3>Announcements</h3>
+              <button class="btn btn-primary">Create New Announcement</button>
+            </div>
+            <div id="announcement-list" class="border rounded p-3 bg-light">
+              <!-- Announcements dynamically added -->
+              <p class="text-muted">No announcements yet.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Homepage Content -->
+        <section class="mb-5">
+          <h2>Homepage Content</h2>
+          <div class="card p-4 shadow-sm">
+            <div class="mb-3">
+              <label for="hero-title" class="form-label">Hero Title</label>
+              <input type="text" id="hero-title" class="form-control" value="MK Toasted Siopao">
+            </div>
+            <div class="mb-3">
+              <label for="hero-subtitle" class="form-label">Hero Subtitle</label>
+              <input type="text" id="hero-subtitle" class="form-control" value="Crispy outside, savory inside!">
+            </div>
+            <div class="mb-3">
+              <label for="promo-text" class="form-label">Promo Text</label>
+              <textarea id="promo-text" class="form-control">Get 2 Toasted Siopao + 1 Drink for only ₱99</textarea>
+            </div>
+            <button class="btn btn-success">Save Changes</button>
+          </div>
+        </section>
+
+        <!-- Business Information -->
+        <section class="mb-5">
+          <h2>Business Information</h2>
+          <div class="card p-4 shadow-sm">
+            <div class="mb-3">
+              <label for="business-name" class="form-label">Business Name</label>
+              <input type="text" id="business-name" class="form-control" value="MK Toasted Siopao">
+            </div>
+            <div class="mb-3">
+              <label for="business-address" class="form-label">Address</label>
+              <textarea id="business-address" class="form-control">123 Food Street, Mandaluyong City, Philippines</textarea>
+            </div>
+            <div class="mb-3">
+              <label for="business-phone" class="form-label">Phone Number</label>
+              <input type="text" id="business-phone" class="form-control" value="+63 912 345 6789">
+            </div>
+            <div class="mb-3">
+              <label for="business-hours" class="form-label">Business Hours</label>
+              <textarea id="business-hours" class="form-control">Monday to Saturday: 9:00 AM - 9:00 PM
+Sunday: 10:00 AM - 7:00 PM</textarea>
+            </div>
+            <button class="btn btn-success">Save Changes</button>
+          </div>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="mb-5">
+          <h2>Social Media Links</h2>
+          <div class="card p-4 shadow-sm">
+            <div class="mb-3">
+              <label for="facebook-url" class="form-label">Facebook</label>
+              <input type="url" id="facebook-url" class="form-control" value="https://facebook.com/mktoastedsiopao">
+            </div>
+            <div class="mb-3">
+              <label for="instagram-url" class="form-label">Instagram</label>
+              <input type="url" id="instagram-url" class="form-control" value="https://instagram.com/mktoastedsiopao">
+            </div>
+            <button class="btn btn-success">Save Changes</button>
+          </div>
+        </section>
+
+        <!-- Site Maintenance -->
+        <section class="mb-5">
+          <h2>Site Maintenance</h2>
+          <div class="card p-4 shadow-sm">
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="maintenance-mode">
+              <label class="form-check-label" for="maintenance-mode">Enable Maintenance Mode</label>
+            </div>
+            <div class="mb-3">
+              <label for="maintenance-message" class="form-label">Maintenance Message</label>
+              <textarea id="maintenance-message" class="form-control">We're currently performing maintenance. We'll be back soon!</textarea>
+            </div>
+            <button class="btn btn-warning">Save Settings</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="admin-script.js"></script>
+</body>
+</html>

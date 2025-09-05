@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MK Toasted Siopao - Order Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="admin-body">
+    <!-- Admin Navbar include -->
+    <div id="admin-navbar"></div>
+
+    <!-- Page Content -->
+    <div class="container pt-5 mt-5">
+        <h2 class="mb-4 text-center">Order Management</h2>
+
+        <!-- Search & Filter -->
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="Search orders...">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+        </div>
+
+        <!-- Status Filters -->
+        <div class="d-flex justify-content-center mb-4 flex-wrap gap-2">
+            <button class="btn btn-outline-primary active">All Orders</button>
+            <button class="btn btn-outline-success">Accepted</button>
+            <button class="btn btn-outline-danger">Rejected</button>
+            <button class="btn btn-outline-secondary">Completed</button>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Orders List</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-1025</td>
+                                <td>Juan Dela Cruz</td>
+                                <td>2 Toasted Siopao, 1 Fries</td>
+                                <td>₱150</td>
+                                <td>Sep 1, 2025</td>
+                                <td><span class="badge bg-success">Accepted</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1024</td>
+                                <td>Maria Santos</td>
+                                <td>3 Toasted Siopao, 2 Drinks</td>
+                                <td>₱240</td>
+                                <td>Sep 1, 2025</td>
+                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success">Accept</button>
+                                    <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1023</td>
+                                <td>Robert Lim</td>
+                                <td>1 Burger, 1 Fries</td>
+                                <td>₱120</td>
+                                <td>Aug 31, 2025</td>
+                                <td><span class="badge bg-secondary">Completed</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1022</td>
+                                <td>Anna Reyes</td>
+                                <td>4 Toasted Siopao</td>
+                                <td>₱200</td>
+                                <td>Aug 31, 2025</td>
+                                <td><span class="badge bg-danger">Rejected</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <button class="btn btn-outline-secondary btn-sm">Previous</button>
+                    <span>Page 1 of 5</span>
+                    <button class="btn btn-outline-secondary btn-sm">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer include -->
+    <div id="footer" class="mt-5"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>
